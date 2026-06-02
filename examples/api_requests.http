@@ -1,0 +1,11 @@
+### Health check
+GET http://127.0.0.1:8000/health
+
+### Ask a question
+POST http://127.0.0.1:8000/ask
+Content-Type: application/json
+
+{
+  "question": "What vector database does DocuMind use by default?",
+  "top_k": 3
+}

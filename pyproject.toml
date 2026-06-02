@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "documind-ai"
+version = "0.1.0"
+description = "RAG chatbot for PDFs, knowledge bases, and datasets using semantic search and LLMs."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Sankrityayana" }]
+license = { text = "MIT" }
+dependencies = [
+  "chromadb>=0.5.0",
+  "fastapi>=0.111.0",
+  "langchain>=0.2.0",
+  "langchain-community>=0.2.0",
+  "openai>=1.40.0",
+  "pandas>=2.2.0",
+  "pydantic>=2.7.0",
+  "pypdf>=4.2.0",
+  "python-dotenv>=1.0.1",
+  "python-multipart>=0.0.9",
+  "sentence-transformers>=3.0.0",
+  "streamlit>=1.36.0",
+  "uvicorn[standard]>=0.30.0"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2.0"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
